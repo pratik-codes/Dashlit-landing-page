@@ -16,7 +16,10 @@ import {
   FaQuoteLeft,
   FaTasks,
 } from "react-icons/fa";
-import tabImage1 from "assets/tab-image-1.png";
+import tabImage1 from "assets/todo-cover.png";
+import quotesCover from "assets/quotes-screen.png";
+import BackgroundScreen from "assets/background-screen.png";
+import linkScreen from "assets/link-screen.png";
 import dotPattern from "assets/dot-pattern.svg";
 
 const Featured = () => {
@@ -91,13 +94,17 @@ const Featured = () => {
         </Box>
         <Box sx={styles.tabContent}>
           {tab.active === "budget" && (
-            <Image src={tabImage1} alt="tab image" className="tabImage" />
+            <Image src={linkScreen} alt="tab image" className="tabImage" />
           )}
           {tab.active === "create" && (
-            <Image src={tabImage1} alt="tab image" className="tabImage" />
+            <Image src={quotesCover} alt="tab image" className="tabImage" />
           )}
           {tab.active === "adjust" && (
-            <Image src={tabImage1} alt="tab image" className="tabImage" />
+            <Image
+              src={BackgroundScreen}
+              alt="tab image"
+              className="tabImage"
+            />
           )}
           {tab.active === "report" && (
             <Image src={tabImage1} alt="tab image" className="tabImage" />
