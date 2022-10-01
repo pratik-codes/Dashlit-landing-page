@@ -1,7 +1,10 @@
-import React from "react";
+import mixpanel from "mixpanel-browser";
+import React, { useState } from "react";
 import { Button, Input, Box, Container, Heading, Text } from "theme-ui";
 
 const Subscribe = () => {
+  const [email, setEmail] = useState();
+
   return (
     <Box as="section" sx={styles.subscribe}>
       <Container>
@@ -20,9 +23,18 @@ const Subscribe = () => {
             placeholder="Enter your email"
             type="email"
             id="subscribeEmail"
+            onChange={(e) => setEmail(e.target.value)}
             sx={styles.input}
           />
-          <Button type="submit" sx={styles.button}>
+          <Button
+            onClick={() => {
+              mixpanel.track("subscribe", {
+                email: email,
+              });
+            }}
+            type="submit"
+            sx={styles.button}
+          >
             Subscribe!
           </Button>
         </Box>
