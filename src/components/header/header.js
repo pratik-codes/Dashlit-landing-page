@@ -34,10 +34,8 @@ export default function Header({ className }) {
           </Flex>
 
           <Link
-            path="https://demodashlit.netlify.app/"
-            onClick={() =>
-              window.open("https://demodashlit.netlify.app/", "_blank")
-            }
+            path="https://app.dashlit.com"
+            onClick={() => window.open("https://app.dashlit.com/", "_blank")}
             ml={2}
             label="SIGN UP (FREE)"
             sx={styles.headerBtn}

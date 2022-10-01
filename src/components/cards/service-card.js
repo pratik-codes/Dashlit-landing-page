@@ -10,7 +10,11 @@ const ServiceCard = ({ image, text, heading, path, coming_soon }) => {
         <Image src={image} alt={heading} />
       </Box>
       <Box sx={styles.content}>
-        {coming_soon && <Box sx={styles.coming_soon}>Coming Soon!</Box>}
+        {coming_soon && (
+          <Box sx={styles.coming_soon_container}>
+            <Box sx={styles.coming_soon}>Coming Soon!</Box>
+          </Box>
+        )}
         <Heading as="h3">{heading}</Heading>
         <Text as="p">{text}</Text>
         {/* <Link sx={styles.link} path={path}>
@@ -66,5 +70,9 @@ const styles = {
     borderRadius: "25px",
     width: "50%",
     marginBottom: "10px",
+  },
+  coming_soon_container: {
+    display: "flex",
+    justifyContent: ["center", null, null, "start"],
   },
 };

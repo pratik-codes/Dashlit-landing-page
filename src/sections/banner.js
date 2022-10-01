@@ -147,8 +147,8 @@ const styles = {
     },
   },
   logo: {
-    height: "10%",
-    width: "10%",
+    height: "100px",
+    width: "100px",
     padding: "15px",
     display: "block",
     borderRadius: "50%",
