@@ -5,9 +5,8 @@ import bannerIcon3 from "assets/banner-icon-1-3.svg";
 import bannerIcon4 from "assets/banner-icon-1-4.svg";
 import bannerIcon5 from "assets/banner-icon-1-5.svg";
 import bannerIcon6 from "assets/banner-icon-1-6.svg";
-import bannerImage from "assets/home.png";
-import logoImage from "assets/d.png";
 import bannerIcon7 from "assets/dot-pattern.svg";
+import bannerImage from "assets/home.png";
 import { Box, Container, Heading, Image } from "theme-ui";
 
 const Banner = () => {
@@ -57,7 +56,7 @@ const Banner = () => {
           src={bannerIcon7}
         />
 
-        <Image sx={styles.logo} src={logoImage} alt="logo image" />
+        {/* <Image sx={styles.logo} src={logoImage} alt="logo image" /> */}
         <Heading as="h2">
           World's best browser productivity dashboard 🚀
         </Heading>

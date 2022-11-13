@@ -1,26 +1,15 @@
-import React, { useState } from "react";
-import { Box, Container, Button } from "theme-ui";
 import { keyframes } from "@emotion/core";
+import BackgroundScreen from "assets/background-screen.png";
+import dotPattern from "assets/dot-pattern.svg";
+import linkScreen from "assets/link-screen.png";
+import tabImage1 from "assets/preferences.png";
+import quotesCover from "assets/quotes-screen.png";
 import BlockTitle from "components/block-title";
 import Image from "components/image";
-import {
-  AiFillDollarCircle,
-  AiFillPieChart,
-  AiOutlineLink,
-  BsListTask,
-} from "react-icons/ai";
-import {
-  FaBriefcase,
-  FaCog,
-  FaPaintBrush,
-  FaQuoteLeft,
-  FaTasks,
-} from "react-icons/fa";
-import tabImage1 from "assets/todo-cover.png";
-import quotesCover from "assets/quotes-screen.png";
-import BackgroundScreen from "assets/background-screen.png";
-import linkScreen from "assets/link-screen.png";
-import dotPattern from "assets/dot-pattern.svg";
+import { useState } from "react";
+import { AiOutlineLink } from "react-icons/ai";
+import { FaPaintBrush, FaQuoteLeft, FaTasks } from "react-icons/fa";
+import { Box, Button, Container } from "theme-ui";
 
 const Featured = () => {
   const [tab, setTab] = useState({
@@ -67,14 +56,14 @@ const Featured = () => {
               className={`${tab.active === "budget" ? "active" : ""}`}
             >
               <AiOutlineLink />
-              Add links and folders
+              Add links, folders and todo's
             </Button>
             <Button
               onClick={() => handleTab("report")}
               className={`${tab.active === "report" ? "active" : ""}`}
             >
               <FaTasks />
-              Track your tasks
+              Customizations
             </Button>
             <Button
               onClick={() => handleTab("adjust")}
